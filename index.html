@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hispana Barber Shop | Barber in Reno, NV</title>
+<meta name="description" content="Hispana Barber Shop in Reno, NV. Haircuts, haircut and shave, and straight-razor shaves. Walk-ins welcome. 487 E Plumb Ln.">
+<link rel="icon" href="images/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d0d0f;--bg2:#15151a;--text:#eee9df;--mute:#9b968b;--gold:#c9a24b;--red:#9e2a2b;--line:#2a2a31}
+@media (prefers-color-scheme:light){:root{--bg:#0d0d0f}} /* site is intentionally dark */
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:300 17px/1.7 Inter,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
+a{color:inherit;text-decoration:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:16px 5vw;background:rgba(13,13,15,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;letter-spacing:.08em;color:var(--gold)}
+.logo{display:flex;align-items:center;gap:10px}.logo img{height:42px;border-radius:6px}
+nav ul{display:flex;gap:28px;list-style:none;font-size:.85rem;letter-spacing:.15em;text-transform:uppercase}
+nav a:hover{color:var(--gold)}
+.btn{display:inline-block;padding:14px 32px;border:1px solid var(--gold);color:var(--gold);letter-spacing:.15em;text-transform:uppercase;font-size:.8rem;cursor:pointer;background:none;transition:.3s}
+.btn:hover{background:var(--gold);color:#000}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:120px 5vw 60px;position:relative;
+background:linear-gradient(rgba(13,13,15,.78),rgba(13,13,15,.95)),url(images/chair.jpg) center/cover}
+.hero-logo{width:min(440px,80vw);margin:0 auto 24px;display:block;border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.hero h1{font-size:clamp(3rem,9vw,7rem);letter-spacing:.02em}
+.hero h1 span{color:var(--gold);font-style:italic}
+.hero p{color:var(--mute);max-width:520px;margin:20px auto 36px}
+.pole{width:34px;height:130px;margin:0 auto 28px;border:2px solid var(--gold);border-radius:17px;
+background:repeating-linear-gradient(-45deg,var(--red) 0 14px,#f4f1ea 14px 28px,#1d3a6b 28px 42px,#f4f1ea 42px 56px);background-size:80px 80px;animation:spin 2.2s linear infinite}
+@keyframes spin{to{background-position:0 80px}}
+.rise{opacity:0;transform:translateY(40px);animation:rise 1s forwards}
+.d1{animation-delay:.2s}.d2{animation-delay:.5s}.d3{animation-delay:.8s}
+@keyframes rise{to{opacity:1;transform:none}}
+.reveal{opacity:0;transform:translateY(40px);transition:1s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+section{padding:110px 5vw}.wrap{max-width:1100px;margin:auto}
+.kicker{color:var(--gold);letter-spacing:.3em;text-transform:uppercase;font-size:.75rem;margin-bottom:12px}
+h2{font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:40px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.card{background:var(--bg2);border:1px solid var(--line);padding:36px;transition:.4s}
+.card:hover{transform:translateY(-8px);border-color:var(--gold)}
+.card h3{font-size:1.7rem;color:var(--gold);margin-bottom:10px}
+.price{color:var(--mute);font-size:.9rem;margin-top:12px}
+.alt{background:var(--bg2)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.ph{aspect-ratio:4/5;background:linear-gradient(135deg,#1c1c22,#101014);border:1px solid var(--line);display:grid;place-items:center;color:var(--mute);font-size:.8rem;text-align:center;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.gallery .ph{aspect-ratio:4/5}
+.gallery .ph:hover img{transform:scale(1.08)}.ph img{transition:.6s}
+blockquote{background:var(--bg);border-left:2px solid var(--gold);padding:24px 28px}
+blockquote cite{display:block;color:var(--mute);font-size:.85rem;margin-top:10px;font-style:normal}
+.stars{color:var(--gold);letter-spacing:3px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+form{display:grid;gap:16px}
+input,textarea,select{width:100%;padding:14px;background:var(--bg2);border:1px solid var(--line);color:var(--text);font:inherit}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--gold)}
+.hp{position:absolute;left:-9999px}
+#msg{color:var(--gold);min-height:1.5em}
+.info p{margin-bottom:14px}.info b{color:var(--gold);font-weight:500}
+iframe{width:100%;height:240px;border:1px solid var(--line);margin-top:10px;filter:grayscale(1) invert(.9) contrast(.9)}
+footer{padding:40px 5vw;text-align:center;color:var(--mute);font-size:.85rem;border-top:1px solid var(--line)}
+footer a{color:var(--gold);margin:0 10px}
+@media(max-width:800px){nav ul{display:none}.about,.contact{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rise,.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="#top"><img src="images/logo.jpg" alt="Hispana Barber Shop"><span>HISPANA</span></a>
+  <ul><li><a href="#services">Services</a></li><li><a href="#about">About</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#contact">Contact</a></li></ul>
+</nav>
+
+<header class="hero" id="top">
+  <div>
+    <img class="hero-logo rise" src="images/logo.jpg" alt="Hispana Barber Shop, barbershop in Reno, NV">
+    <p class="kicker rise d1">Barber · Reno, Nevada</p>
+    <h1 class="rise d1">Hispana <span>Barber Shop</span></h1>
+    <p class="rise d2">Sharp cuts, clean shaves, and a warm welcome. Walk-ins welcome, first come first served.</p>
+    <a href="#contact" class="btn rise d3">Book a Visit</a>
+  </div>
+</header>
+
+<section id="services"><div class="wrap">
+  <p class="kicker reveal">What we do</p><h2 class="reveal">Services</h2>
+  <div class="cards">
+    <div class="card reveal"><h3>Haircut</h3><p>Classic and modern cuts tailored to you.</p><p class="price">Price: add here</p></div>
+    <div class="card reveal"><h3>Haircut &amp; Shave</h3><p>The full treatment: precise cut plus a smooth finish.</p><p class="price">Price: add here</p></div>
+    <div class="card reveal"><h3>Shave Only</h3><p>A clean, close shave done with care.</p><p class="price">Price: add here</p></div>
+  </div>
+</div></section>
+
+<section id="about" class="alt"><div class="wrap about">
+  <div class="ph reveal"><img src="images/team.jpg" alt="Barber and client at Hispana Barber Shop" loading="lazy"></div>
+  <div class="reveal">
+    <p class="kicker">Our story</p><h2>Meet the Owner</h2>
+    <p>Hispana Barber Shop is a new barber shop in Reno, Nevada. Come check us out.</p>
+    <p style="margin-top:14px;color:var(--mute)">[Add the owner's name, story, years of experience and what makes the shop special.]</p>
+  </div>
+</div></section>
+
+<section id="gallery"><div class="wrap">
+  <p class="kicker reveal">The shop</p><h2 class="reveal">Gallery</h2>
+  <div class="gallery">
+    <div class="ph reveal"><img src="images/cut-design.jpg" alt="Skin fade with hair design" loading="lazy"></div>
+    <div class="ph reveal"><img src="images/cut-fade.jpg" alt="High fade with textured top" loading="lazy"></div>
+    <div class="ph reveal"><img src="images/cut-blonde.jpg" alt="Blonde top with low fade" loading="lazy"></div>
+    <div class="ph reveal"><img src="images/cut-slick.jpg" alt="Slick back with highlights" loading="lazy"></div>
+    <div class="ph reveal"><img src="images/cut-classic.jpg" alt="Classic short fade and goatee" loading="lazy"></div>
+    <div class="ph reveal"><img src="images/beard-trim.jpg" alt="Beard trim" loading="lazy"></div>
+    <div class="ph reveal"><img src="images/chair.jpg" alt="Barber chairs at Hispana Barber Shop" loading="lazy"></div>
+    <div class="ph reveal"><img src="images/cut-side.jpg" alt="Fade and side profile" loading="lazy"></div>
+  </div>
+</div></section>
+
+<section id="reviews" class="alt"><div class="wrap">
+  <p class="kicker reveal">Kind words</p><h2 class="reveal">What Clients Say</h2>
+  <div class="cards">
+    <blockquote class="reveal"><span class="stars">★★★★★</span><p>Found the shop by accident and glad I did. Best haircuts in town, and the owner is a nice guy.</p><cite>Luis D., North Valleys, Reno</cite></blockquote>
+    <blockquote class="reveal"><span class="stars">★★★★★</span><p>Booked out everywhere else, but Juan the owner took me in as a walk-in and did a great job.</p><cite>Jose M. G., Reno</cite></blockquote>
+  </div>
+  <p class="reveal" style="margin-top:24px"><a class="btn" href="https://www.yelp.com/biz/hispana-barber-shop-reno" target="_blank" rel="noopener">Read more on Yelp</a></p>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <p class="kicker reveal">Get in touch</p><h2 class="reveal">Contact</h2>
+  <div class="contact">
+    <form id="form" class="reveal">
+      <input name="name" placeholder="Your name" required>
+      <input name="email" type="email" placeholder="Email" required>
+      <input name="phone" type="tel" placeholder="Phone (optional)">
+      <select name="service"><option>Haircut</option><option>Haircut and shave</option><option>Shave only</option><option>Other</option></select>
+      <textarea name="message" rows="5" placeholder="Message / preferred day and time" required></textarea>
+      <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn" type="submit">Send Message</button>
+      <p id="msg" role="status"></p>
+    </form>
+    <div class="info reveal">
+      <p><b>Address</b><br>487 E Plumb Ln, Reno, NV 89502</p>
+      <p><b>Phone</b><br><a href="tel:+17758701575">(775) 870-1575</a></p>
+      <p><b>Email</b><br><a href="mailto:hispanabarnershop@gmail.com">hispanabarnershop@gmail.com</a></p>
+      <p><b>Hours</b><br>Add hours here (Yelp lists opening at 10 AM)</p>
+      <iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=487+E+Plumb+Ln+Reno+NV+89502&output=embed"></iframe>
+    </div>
+  </div>
+</div></section>
+
+<footer>
+  <p><a href="https://www.instagram.com/hispana_barbershop" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/p/Hispana-barber-shop-100063706922506/" target="_blank" rel="noopener">Facebook</a><a href="https://www.yelp.com/biz/hispana-barber-shop-reno" target="_blank" rel="noopener">Yelp</a></p>
+  <p style="margin-top:12px">© <span id="y"></span> Hispana Barber Shop · Reno, NV</p>
+</footer>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.getElementById('form').addEventListener('submit',async e=>{
+  e.preventDefault();const f=e.target,m=document.getElementById('msg'),b=f.querySelector('button');
+  b.disabled=true;m.textContent='Sending...';
+  try{
+    const r=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(f)))});
+    if(!r.ok)throw 0;f.reset();m.textContent='Thank you! We will get back to you soon.';
+  }catch{m.textContent='Something went wrong. Please call (775) 870-1575.'}
+  b.disabled=false;
+});
+</script>
+</body>
+</html>
